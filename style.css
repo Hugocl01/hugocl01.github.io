@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&family=IBM+Plex+Mono:wght@100&family=Roboto+Mono:wght@100&family=Source+Code+Pro:wght@200&display=swap');
+
+.progress .progress-bar {
+    animation: animate-positive 2s;
+}
+
+body {
+    font-family: "Tilt Neon", sans-serif;
+}
+
+/*
+.textos {
+    font-family: 'Roboto Mono', monospace;
+}
+*/
+
+.button {
+    background-color: #37ce5d;
+}
+
+.button:hover {
+    background-color: #10d821;
+}
+
+.orb {
+    animation: spin 2s linear infinite;
+    width: 350px;
+    height: 350px;
+    margin: auto;
+    margin-top: 140px;
+    margin-bottom: 140px;
+    border-radius: 50%;
+    position: relative;
+    box-shadow:
+        inset 0 0 50px #ffffff,
+        inset 20px 0 60px #ee82ee,
+        inset -20px 0 60px #00ffff,
+        inset 20px 0 300px #ee82ee,
+        inset -20px 0 300px #00ffff,
+        0 0 50px #ffffff,
+        -10px 0 60px #ee82ee,
+        10px 0 60px #00ffff;
+}
+
+@keyframes spin {
+    0% {
+        top: 20px;
+    }
+
+    25% {
+        top: 22px;
+    }
+
+    50% {
+        top: 30px;
+    }
+
+    75% {
+        top: 27px;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        top: 20px;
+    }
+}
+
+.carga {
+    width: 40px;
+    height: 40px;
+    border: 3px solid red;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.java-progress {
+    width: 65%;
+    background-color: #c2321f;
+    initial-value: 65;
+}

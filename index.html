@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<!--
+    GitHub: Hugocl01
+-->
+<html lang="es" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Hugocl01 Portfolio" />
+    <meta name="author" content="Hugocl01" />
+    <meta name="copyright" content="Hugocl01 Portfolio" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css"
+        integrity="sha384-PJsj/BTMqILvmcej7ulplguok8ag4xFTPryRq8xevL7eBYSmpXKcbNVuy+P0RMgq" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon:wght@400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/imagenes/logo.ico" />
+    <script src="funciones.js"></script>
+    <title>Hugocl01</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg bd-navbar sticky-top mb-4" style="background-color: #67e999;">
+        <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+            <div class="d-lg-none" style="width: 1.5rem;"></div>
+
+            <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="Bootstrap">
+                <img src="/imagenes/logo.ico" alt="logo" width="50">
+            </a>
+
+            <div class="d-flex">
+                <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
+                    <svg class="bi" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-three-dots" viewBox="0 0 16 16">
+                        <path
+                            d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar"
+                aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true" style="background-color: #ffffff;">
+                <div class="offcanvas-header px-4 pb-0">
+                    <img src="/imagenes/logo.ico" alt="logo" width="50">
+                    <h5 class="offcanvas-title" id="bdNavbarOffcanvasLabel">Hugocl01</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close" data-bs-target="#bdNavbar"></button>
+                </div>
+
+                <div class="offcanvas-body p-4 pt-0 p-lg-0">
+                    <hr class="d-lg-none text-white-50">
+
+                    <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav fs-5">
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="#">Inicio</a>
+                        </li>
+
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="#">Sobre mi</a>
+                        </li>
+
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="#">Proyectos</a>
+                        </li>
+
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="#">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <hr class="d-lg-none text-white-50">
+
+                    <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="https://github.com/Hugocl01" target="_blank"
+                                rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="navbar-nav-svg"
+                                    viewBox="0 0 512 499.36" role="img">
+                                    <title>GitHub</title>
+                                    <path fill="currentColor" fill-rule="evenodd"
+                                        d="M256 0C114.64 0 0 114.61 0 256c0 113.09 73.34 209 175.08 242.9 12.8 2.35 17.47-5.56 17.47-12.34 0-6.08-.22-22.18-.35-43.54-71.2 15.49-86.2-34.34-86.2-34.34-11.64-29.57-28.42-37.45-28.42-37.45-23.27-15.84 1.73-15.55 1.73-15.55 25.69 1.81 39.21 26.38 39.21 26.38 22.84 39.12 59.92 27.82 74.5 21.27 2.33-16.54 8.94-27.82 16.25-34.22-56.84-6.43-116.6-28.43-116.6-126.49 0-27.95 10-50.8 26.35-68.69-2.63-6.48-11.42-32.5 2.51-67.75 0 0 21.49-6.88 70.4 26.24a242.65 242.65 0 0 1 128.18 0c48.87-33.13 70.33-26.24 70.33-26.24 14 35.25 5.18 61.27 2.55 67.75 16.41 17.9 26.31 40.75 26.31 68.69 0 98.35-59.85 120-116.88 126.32 9.19 7.9 17.38 23.53 17.38 47.41 0 34.22-.31 61.83-.31 70.23 0 6.85 4.61 14.81 17.6 12.31C438.72 464.97 512 369.08 512 256.02 512 114.62 397.37 0 256 0z">
+                                    </path>
+                                </svg>
+                                <small class="d-lg-none ms-2">GitHub</small>
+                            </a>
+                        </li>
+
+                        <li class="nav-item col-6 col-lg-auto">
+                            <a class="nav-link py-2 px-0 px-lg-2" href="https://es.linkedin.com/" target="_blank"
+                                rel="noopener">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-linkedin" viewBox="0 0 16 16" role="img">
+                                    <title>Linkedin</title>
+                                    <path
+                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                                </svg>
+                                <small class="d-lg-none ms-2">LinkedIn</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <div class="alert alert-warning" role="alert">
+            Esta pagina esta en desarrollo e incompleta, todavia no esta acabada disculpe las molestias.
+        </div>
+
+        <section class="mb-4">
+            <article>
+                <h2>Soy Hugo,</h2>
+                <h4>Desarrollador Web</h4>
+            </article>
+            <div class="orb"></div>
+            <article>
+                <h3>Subsección</h3>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis velit ipsum, non
+                    mattis ex suscipit eget. Mauris tincidunt dignissim risus non mollis. Nam sed enim eu nunc convallis
+                    gravida. Integer in eros libero. Phasellus dictum ex eget interdum imperdiet. Suspendisse potenti.
+                    Nulla sapien urna, sollicitudin eget arcu id, rutrum auctor elit. In ex libero, pharetra sed iaculis
+                    vitae, lobortis at risus.
+                </p>
+
+                <p>
+                    Vivamus egestas elit at ultrices tristique. Aliquam eget dignissim lectus. Nam sed eros eget nibh
+                    pulvinar convallis. Curabitur in porta nibh. Nullam a tristique tortor. Donec ligula urna, vehicula
+                    vel scelerisque at, pellentesque ac sem. Vestibulum ante ipsum primis in faucibus orci luctus et
+                    ultrices posuere cubilia curae; Nullam rhoncus tellus id lectus faucibus tincidunt.
+                </p>
+            </article>
+        </section>
+
+        <section class="mb-4">
+            <article>
+                <h3>Sobre mi</h3>
+
+                <p>
+                    Actualmente me encuentro estudiando el segundo año de FP de Desarrollo de aplicaciones web.
+                    Ademas tengo mucha curiosidad por por aprender tecnologías nuevas.
+                </p>
+
+                <div class="mb-4">
+                    <button type="button" class="btn text-white button">Contacto
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
+                        </svg></button>
+                    <button type="button" class="btn text-white button">Descargar CV
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-file-earmark-person-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0zM9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm2 5.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-.245S4 12 8 12s5 1.755 5 1.755z" />
+                        </svg></button>
+                </div>
+
+                <div class="row mb-4" style="max-width: 100%;">
+                    <div class="col-md-12">
+                        <div class="progress-tittle mb-3">
+                            <h5>JAVA</h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"
+                                    style="width: 65%; background-color: #c2321f;" aria-valuenow="65" aria-valuemin="0"
+                                    aria-valuemax="100">65%</div>
+                            </div>
+                        </div>
+                        <div class="progress-tittle mb-3">
+                            <h5>HTML</h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"
+                                    style="width: 70%; background-color: #ec8129;" aria-valuenow="70" aria-valuemin="0"
+                                    aria-valuemax="100">70%</div>
+                            </div>
+                        </div>
+                        <div class="progress-tittle mb-3">
+                            <h5>CSS</h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"
+                                    style="width: 50%; background-color: #2763e4;" aria-valuenow="50" aria-valuemin="0"
+                                    aria-valuemax="100">50%</div>
+                            </div>
+                        </div>
+                        <div class="progress-tittle mb-3">
+                            <h5>BOOTSTRAP</h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"
+                                    style="width: 20%; background-color: #702cf6;" aria-valuenow="20" aria-valuemin="0"
+                                    aria-valuemax="100">20%</div>
+                            </div>
+                        </div>
+                        <div class="progress-tittle mb-3">
+                            <h5>JAVASCRIPT</h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"
+                                    style="width: 5%; background-color: #e4e126;" aria-valuenow="5" aria-valuemin="0"
+                                    aria-valuemax="100">5%</div>
+                            </div>
+                        </div>
+                        <div class="progress-tittle mb-3">
+                            <h5>PHP</h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"
+                                    style="width: 5%; background-color: #9992f5;" aria-valuenow="5" aria-valuemin="0"
+                                    aria-valuemax="100">5%</div>
+                            </div>
+                        </div>
+                        <div class="progress-tittle mb-3">
+                            <h5>MYSQL</h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"
+                                    style="width: 75%; background-color: #2763e4;" aria-valuenow="75" aria-valuemin="0"
+                                    aria-valuemax="100">75%</div>
+                            </div>
+                        </div>
+                        <div class="progress-tittle mb-3">
+                            <h5>GIT</h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"
+                                    style="width: 40%; background-color: #df521b;" aria-valuenow="40" aria-valuemin="0"
+                                    aria-valuemax="100">40%</div>
+                            </div>
+                        </div>
+                        <div class="progress-tittle mb-3">
+                            <h5>MARKDOWN</h5>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar"
+                                    style="width: 75%; background-color: #2b2929;" aria-valuenow="75" aria-valuemin="0"
+                                    aria-valuemax="100">75%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="mb-4">
+                <h3>Lenguajes y tecnologías que estoy estudiando:</h3>
+
+                <div class="container mb-4" style="padding-left: 0px;">
+                    <img src="/imagenes/icons/java/java-original.svg" alt="java" width="80" height="80" />
+                    <img src="/imagenes/icons/html5/html5-original.svg" alt="html5" width="80" height="80" />
+                    <img src="/imagenes/icons/css3/css3-original.svg" alt="css3" width="80" height="80" />
+                    <img src="/imagenes/icons/bootstrap/bootstrap-original.svg" alt="bootstrap" width="80"
+                        height="80" />
+                    <img src="/imagenes/icons/javascript/javascript-original.svg" alt="javasript" width="80"
+                        height="80" />
+                    <img src="/imagenes/icons/mysql/mysql-original-wordmark.svg" alt="mysql" width="80" height="80"" />
+                    <img src=" /imagenes/icons/git/git-original.svg" alt="git" width="80" height="80" />
+                    <img src="/imagenes/icons/markdown/markdown-original.svg" alt="markdown" width="80" height="80" />
+                    <img src="/imagenes/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                        alt="amazonwebservices" width="80" height="80" " />
+                    <img src=" /imagenes/icons/azure/azure-original-wordmark.svg" alt="azure" width="80" height="80" />
+                </div>
+            </article>
+        </section>
+
+        <section class=" mb-4">
+            <div>
+                <h3>Proyectos:</h3>
+
+                <div class="content d-flex flex-wrap justify-content-center">
+                    <div class="card m-3" style="width: 18rem;">
+                        <img src="/imagenes/PasswordGenerator-logo.png" class="card-img-top"
+                            alt="PasswordGenerator-logo">
+                        <div class="card-body">
+                            <h5 class="card-title">Password Generator</h5>
+                            <p class="card-text">Aplicación que te permite generar contraseñas seguras y
+                                personalizadas,
+                                de forma aleatoria.</p>
+                            <a class="btn text-white btn-floating m-1" style="background-color: #333333;"
+                                href="https://github.com/Hugocl01/PasswordGenerator" role="button">Github<i
+                                    class="bi bi-github pe-2"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="card m-3" style="width: 18rem;">
+                        <img src="/imagenes/logo.ico" class="card-img-top" alt="logo">
+                        <div class="card-body">
+                            <h5 class="card-title">Mi Portfolio</h5>
+                            <p class="card-text">Portfolio en el que estas actualmente, puedes ver el codigo en
+                                caso de
+                                que seas curios@</p>
+                            <a class="btn text-white btn-floating m-1" style="background-color: #333333;"
+                                href="https://github.com/Hugocl01/Hugocl01.github.io" role="button">Github<i
+                                    class="bi bi-github pe-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-4">
+            <div>
+
+                <h3>Contacto<img src="/imagenes/user.ico" alt="" width="50px"></h3>
+
+                <p>
+                    Si quieres contactar conmigo puedes hacerlo a través de GitHub o LinkedIn.
+                </p>
+
+                <div class="container mb-4">
+                    <a class="btn text-white btn-floating m-1" style="background-color: #333333;"
+                        href="https://github.com/Hugocl01" target="_blank" rel="noopener" role="button">GitHub<i
+                            class="bi bi-github pe-2"></i></a>
+
+                    <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;"
+                        href="https://es.linkedin.com/" target="_blank" rel="noopener" role="button">LinkedIn<i
+                            class="bi bi-linkedin pe-2"></i></a>
+
+                    <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#"
+                        role="button">Email
+                        <i class="bi bi-envelope pe-2"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center text-dark" style="background-color: #67e999;">
+        <div class="text-center p-3">
+            Contacta conmigo mediante:
+        </div>
+
+        <div class="container mb-4">
+            <a class="btn text-white btn-floating m-1" style="background-color: #333333;"
+                href="https://github.com/Hugocl01" role="button">GitHub<i class="bi bi-github pe-2"></i></a>
+
+            <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" href="#"
+                role="button">LinkedIn<i class="bi bi-linkedin pe-2"></i></a>
+
+            <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#" role="button">Email
+                <i class="bi bi-envelope pe-2"></i></a>
+        </div>
+
+        <div class="mb-4">
+            <a class=" text-dark btn-floating m-1"
+                style="background-color: #ffffff; font-size: 40px; border-radius: 10px;" href="#" role="button">
+                <i class="bi bi-arrow-up-short"></i></a>
+        </div>
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            Copyright © 2023 Hugocl01 | Desarrollador Web | España
+        </div>
+    </footer>
+</body>
+
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+</html>
