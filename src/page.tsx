@@ -7,7 +7,7 @@ import { Github, Linkedin, Mail, ExternalLink, ArrowUpRight, Menu, X } from "luc
 const sections = [
     { id: "home", label: "01", title: "Inicio" },
     { id: "about", label: "02", title: "Acerca" },
-    { id: "work", label: "03", title: "Trabajo" },
+    { id: "projects", label: "03", title: "Proyectos" },
     { id: "skills", label: "04", title: "Skills" },
     { id: "contact", label: "05", title: "Contacto" },
 ]
@@ -168,7 +168,7 @@ export default function Portfolio() {
                                         transition={{ delay: 0.5 }}
                                         className="text-sm font-mono text-gray-600 tracking-wider uppercase"
                                     >
-                                        Desarrollador Web Frontend
+                                        Desarrollador Web Full Stack
                                     </motion.p>
                                     <motion.h1 style={{ y: textY }} className="text-5xl lg:text-7xl font-bold leading-none">
                                         CREATIVE
@@ -194,10 +194,10 @@ export default function Portfolio() {
                                     className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-6"
                                 >
                                     <Button
-                                        onClick={() => scrollToSection("work")}
+                                        onClick={() => scrollToSection("projects")}
                                         className="bg-black text-white hover:bg-gray-800 px-8 py-6 text-lg group"
                                     >
-                                        Ver Trabajo
+                                        Ver Proyectos
                                         <ArrowUpRight className="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                     </Button>
                                     <div className="flex space-x-4">
@@ -292,12 +292,10 @@ export default function Portfolio() {
                                     className="space-y-6 text-lg text-gray-300 leading-relaxed"
                                 >
                                     <p>
-                                        Con más de 3 años de experiencia en desarrollo frontend, me especializo en crear interfaces de
-                                        usuario que no solo se ven increíbles, sino que también ofrecen experiencias excepcionales.
+                                        Recién titulado en desarrollo web, me especializo en crear sitios y aplicaciones que combinan funcionalidad y una experiencia visual atractiva.
                                     </p>
                                     <p>
-                                        Mi enfoque combina creatividad visual con sólidos principios de ingeniería de software, siempre
-                                        buscando la perfección en cada línea de código.
+                                        Mi enfoque está en aplicar buenas prácticas desde el inicio de mi carrera, priorizando código limpio, mantenible y accesible.
                                     </p>
                                 </motion.div>
 
@@ -313,7 +311,7 @@ export default function Portfolio() {
                                         <p className="text-gray-400">Proyectos Completados</p>
                                     </div>
                                     <div>
-                                        <h3 className="text-3xl font-bold text-white mb-2">3+</h3>
+                                        <h3 className="text-3xl font-bold text-white mb-2">1+</h3>
                                         <p className="text-gray-400">Años de Experiencia</p>
                                     </div>
                                 </motion.div>
@@ -330,10 +328,14 @@ export default function Portfolio() {
                                     <h3 className="text-xl font-semibold mb-6">Tecnologías Principales</h3>
                                     <div className="space-y-4">
                                         {[
-                                            { name: "React/Next.js", level: 95 },
-                                            { name: "TypeScript", level: 90 },
-                                            { name: "Tailwind CSS", level: 95 },
-                                            { name: "Node.js", level: 80 },
+                                            { name: "React", level: 80 },
+                                            { name: "JavaScript", level: 90 },
+                                            { name: "TypeScript", level: 75 },
+                                            { name: "Laravel", level: 80 },
+                                            { name: "PHP", level: 90 },
+                                            { name: "MySQL", level: 80 },
+                                            { name: "Tailwind CSS", level: 75 },
+                                            { name: "BootStrap", level: 75 },
                                         ].map((skill, index) => (
                                             <motion.div
                                                 key={skill.name}
@@ -366,7 +368,7 @@ export default function Portfolio() {
                 </section>
 
                 {/* Work Section */}
-                <section id="work" className="py-20">
+                <section id="projects" className="py-20">
                     <div className="container mx-auto px-8 lg:px-16">
                         <motion.div
                             initial={{ opacity: 0, y: 50 }}
@@ -489,27 +491,27 @@ export default function Portfolio() {
                             viewport={{ once: true }}
                             className="text-center mb-16"
                         >
-                            <p className="text-sm font-mono text-gray-600 tracking-wider uppercase mb-4">04 — Habilidades Técnicas</p>
-                            <h2 className="text-4xl lg:text-5xl font-bold">Expertise</h2>
+                            <p className="text-sm font-mono text-gray-600 tracking-wider uppercase mb-4">04 — Skills</p>
+                            <h2 className="text-4xl lg:text-5xl font-bold">Habilidades Técnicas</h2>
                         </motion.div>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                             {[
                                 {
                                     category: "Frontend",
-                                    skills: ["React", "Next.js", "Vue.js", "TypeScript", "JavaScript ES6+"],
+                                    skills: ["React", "JavaScript", "TypeScript"],
                                 },
                                 {
                                     category: "Styling",
-                                    skills: ["Tailwind CSS", "Styled Components", "SASS/SCSS", "CSS Grid/Flexbox"],
+                                    skills: ["Tailwind", "Bootstrap", "CSS"],
                                 },
                                 {
                                     category: "Backend",
-                                    skills: ["Node.js", "Express", "MongoDB", "PostgreSQL", "REST APIs"],
+                                    skills: ["Laravel", "PHP", "MySQL", "REST APIs"],
                                 },
                                 {
                                     category: "Tools",
-                                    skills: ["Git", "Webpack", "Vite", "Docker", "Figma"],
+                                    skills: ["Git", "Vite", "VSCode", "Postman"],
                                 },
                             ].map((category, index) => (
                                 <motion.div
@@ -552,15 +554,14 @@ export default function Portfolio() {
                             viewport={{ once: true }}
                             className="text-center mb-16"
                         >
-                            <p className="text-sm font-mono text-gray-400 tracking-wider uppercase mb-4">05 — Hablemos</p>
+                            <p className="text-sm font-mono text-gray-400 tracking-wider uppercase mb-4">05 — Contacto</p>
                             <h2 className="text-4xl lg:text-6xl font-bold mb-8">
                                 ¿Tienes un proyecto
                                 <br />
                                 <span className="text-gray-400">en mente?</span>
                             </h2>
                             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                                Estoy siempre interesado en nuevos desafíos y oportunidades de colaboración. ¡Conectemos y creemos algo
-                                increíble juntos!
+                                Estoy siempre interesado en nuevos desafíos y oportunidades donde pueda aportar, aprender y crecer como desarrollador.
                             </p>
                         </motion.div>
 
