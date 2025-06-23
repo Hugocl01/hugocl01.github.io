@@ -46,7 +46,7 @@ const projects = [
         description: "Sitio web para agencia creativa con animaciones avanzadas y experiencia de usuario inmersiva.",
         image: ProyectoPokemon,
         tech: ["React", "JavaScript", "CSS"],
-        year: "2023",
+        year: "2025",
         demoUrl: "https://dwec-pokemon.netlify.app/",
         codeUrl: "https://github.com/Hugocl01/Proyecto-Pokemon"
     },
