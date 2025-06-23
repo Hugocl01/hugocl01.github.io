@@ -3,13 +3,83 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Github, Linkedin, Mail, ExternalLink, ArrowUpRight, Menu, X } from "lucide-react"
+import Foko from "./assets/Foko.png"
+import ProyectoPokemon from "./assets/Proyecto-Pokemon.png"
 
 const sections = [
     { id: "home", label: "01", title: "Inicio" },
     { id: "about", label: "02", title: "Acerca" },
-    { id: "projects", label: "03", title: "Proyectos" },
-    { id: "skills", label: "04", title: "Skills" },
-    { id: "contact", label: "05", title: "Contacto" },
+    { id: "experience", label: "03", title: "Experiencia" },
+    { id: "projects", label: "04", title: "Proyectos" },
+    { id: "skills", label: "05", title: "Skills" },
+    { id: "contact", label: "06", title: "Contacto" },
+]
+
+const links = [
+    {
+        id: "github",
+        url: "https://github.com/Hugocl01",
+        icon: <Github className="w-5 h-5" />,
+    },
+    {
+        id: "linkedin",
+        url: "https://www.linkedin.com/in/hugo-cay%C3%B3n-laso-1a8248273/",
+        icon: <Linkedin className="w-5 h-5" />,
+    },
+]
+
+const projects = [
+    {
+        title: "Foko",
+        category: "Full Stack Development",
+        description: "Aplicación web diseñada para fotógrafos y entusiastas de la fotografía.",
+        image: Foko,
+        tech: ["React", "TypeScript", "JavaScript", "Inertia.js", "Laravel", "PHP", "MySQL", "Tailwind"],
+        year: "2025",
+        demoUrl: "https://foko.laravel.cloud",
+        codeUrl: "https://github.com/Hugocl01/Foko"
+    },
+    {
+        title: "Proyecto Pokémon",
+        category: "Frontend Development",
+        description: "Sitio web para agencia creativa con animaciones avanzadas y experiencia de usuario inmersiva.",
+        image: ProyectoPokemon,
+        tech: ["React", "JavaScript", "CSS"],
+        year: "2023",
+        demoUrl: "https://dwec-pokemon.netlify.app/",
+        codeUrl: "https://github.com/Hugocl01/Proyecto-Pokemon"
+    },
+]
+
+const jobs = [
+    {
+        company: "Netkia",
+        position: "Desarrollador Web Full Stack",
+        period: "2025 - Presente",
+        website: "https://netkia.es",
+        description:
+            "Desarrollo de sitios web y aplicaciones personalizadas para diversos clientes.",
+        achievements: [
+            "Desarrollo de más de 4 proyectos web exitosos",
+            "Implementación de gestión de usuario en aplicación encargada de administrar el acceso a través de IPs"
+        ],
+        technologies: ["CakePHP", "PHP", "MySQL", "React", "TypeScript", "JavaScript", "Tailwind CSS", "CSS", "Git"],
+    },
+    {
+        company: "IES Miguel Herrero",
+        position: "Estudiante de Desarrollo Web",
+        period: "2021 - 2025",
+        website: "https://www.educantabria.es/web/ies-miguel-herrero-pereda",
+        description:
+            "Formación intensiva en desarrollo web full stack, completando múltiples proyectos prácticos y colaborativos.",
+        achievements: [
+            "Desarrollo de aplicaciones con frameworks y librerias",
+            "Creación de API REST con autenticación",
+            "Implementación de bases de datos relacionales",
+            "Trabajo en equipo usando metodologías ágiles",
+        ],
+        technologies: ["HTML", "CSS", "React", "JavaScript", "Laravel", "PHP", "Bootstrap", "Java", "Git"],
+    },
 ]
 
 export default function Portfolio() {
@@ -80,15 +150,15 @@ export default function Portfolio() {
                     <div className="flex justify-between items-center">
                         {/* Logo */}
                         <motion.div
-                            whileHover={{ scale: 1.05 }}
+                            whileHover={{ y: -2 }}
                             className="text-2xl font-bold cursor-pointer"
                             onClick={() => scrollToSection("home")}
                         >
-                            Portfolio
+                            Hugo
                         </motion.div>
 
                         {/* Desktop Navigation */}
-                        <nav className="hidden md:flex items-center space-x-12">
+                        <nav className="hidden lg:flex items-center space-x-12">
                             {sections.map((section, index) => (
                                 <motion.button
                                     key={section.id}
@@ -109,7 +179,7 @@ export default function Portfolio() {
                         </nav>
 
                         {/* Mobile Menu Button */}
-                        <Button variant="ghost" size="sm" className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+                        <Button variant="ghost" size="sm" className="lg:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                         </Button>
                     </div>
@@ -120,7 +190,7 @@ export default function Portfolio() {
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
-                            className="md:hidden mt-6 pb-6 border-t border-gray-200 pt-6"
+                            className="lg:hidden mt-6 pb-6 border-t border-gray-200 pt-6"
                         >
                             <div className="space-y-4">
                                 {sections.map((section, index) => (
@@ -201,22 +271,19 @@ export default function Portfolio() {
                                         <ArrowUpRight className="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                                     </Button>
                                     <div className="flex space-x-4">
-                                        <motion.a
-                                            href="#"
-                                            whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.9 }}
-                                            className="w-12 h-12 border border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-colors"
-                                        >
-                                            <Github className="w-5 h-5" />
-                                        </motion.a>
-                                        <motion.a
-                                            href="#"
-                                            whileHover={{ scale: 1.1 }}
-                                            whileTap={{ scale: 0.9 }}
-                                            className="w-12 h-12 border border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-colors"
-                                        >
-                                            <Linkedin className="w-5 h-5" />
-                                        </motion.a>
+                                        {links.map((link) => (
+                                            <motion.a
+                                                key={link.id}
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                whileHover={{ scale: 1.1 }}
+                                                whileTap={{ scale: 0.9 }}
+                                                className="w-12 h-12 border border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-colors"
+                                            >
+                                                {link.icon}
+                                            </motion.a>
+                                        ))}
                                     </div>
                                 </motion.div>
                             </motion.div>
@@ -239,11 +306,7 @@ export default function Portfolio() {
                                         className="absolute inset-4 border border-gray-200 rounded-full"
                                     />
                                     <div className="absolute inset-8 rounded-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-                                        <img
-                                            src="/placeholder.svg"
-                                            alt="Profile"
-                                            className="w-full h-full object-cover"
-                                        />
+                                        <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
                                     </div>
                                 </div>
                             </motion.div>
@@ -292,10 +355,12 @@ export default function Portfolio() {
                                     className="space-y-6 text-lg text-gray-300 leading-relaxed"
                                 >
                                     <p>
-                                        Recién titulado en desarrollo web, me especializo en crear sitios y aplicaciones que combinan funcionalidad y una experiencia visual atractiva.
+                                        Recién titulado en desarrollo de aplicaciones web, me especializo en crear sitios y aplicaciones que combinan
+                                        funcionalidad y una experiencia visual atractiva.
                                     </p>
                                     <p>
-                                        Mi enfoque está en aplicar buenas prácticas desde el inicio de mi carrera, priorizando código limpio, mantenible y accesible.
+                                        Mi enfoque está en aplicar buenas prácticas desde el inicio de mi carrera, priorizando código
+                                        limpio, mantenible y accesible.
                                     </p>
                                 </motion.div>
 
@@ -307,7 +372,7 @@ export default function Portfolio() {
                                     className="grid grid-cols-2 gap-8"
                                 >
                                     <div>
-                                        <h3 className="text-3xl font-bold text-white mb-2">15+</h3>
+                                        <h3 className="text-3xl font-bold text-white mb-2">10+</h3>
                                         <p className="text-gray-400">Proyectos Completados</p>
                                     </div>
                                     <div>
@@ -367,6 +432,113 @@ export default function Portfolio() {
                     </div>
                 </section>
 
+                {/* Experience Section */}
+                <section id="experience" className="py-20 bg-gray-50">
+                    <div className="container mx-auto px-8 lg:px-16">
+                        <motion.div
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1 }}
+                            viewport={{ once: true }}
+                            className="mb-16"
+                        >
+                            <p className="text-sm font-mono text-gray-600 tracking-wider uppercase mb-4">
+                                03 — Experiencia Profesional
+                            </p>
+                            <h2 className="text-4xl lg:text-5xl font-bold">
+                                Trayectoria
+                                <br />
+                                <span className="text-gray-400">Profesional</span>
+                            </h2>
+                        </motion.div>
+
+                        <div className="space-y-12">
+                            {jobs.map((job, index) => (
+                                <motion.div
+                                    key={job.company}
+                                    initial={{ opacity: 0, y: 50 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: index * 0.2 }}
+                                    viewport={{ once: true }}
+                                    className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300"
+                                >
+                                    <div className="grid lg:grid-cols-3 gap-8">
+                                        <div className="lg:col-span-1">
+                                            <div className="space-y-4">
+                                                <div>
+                                                    <h3 className="text-xl font-bold text-black">{job.company}</h3>
+                                                    <p className="text-lg text-gray-700 font-medium">{job.position}</p>
+                                                    <p className="text-sm font-mono text-gray-500 mt-2">{job.period}</p>
+                                                </div>
+
+                                                <div className="flex flex-wrap gap-2">
+                                                    {job.technologies.map((tech) => (
+                                                        <Badge key={tech} variant="outline" className="border-gray-300 text-gray-700 text-xs">
+                                                            {tech}
+                                                        </Badge>
+                                                    ))}
+                                                </div>
+
+                                                {/* Añadir este botón después de las tecnologías */}
+                                                {job.website && job.website !== "#" && (
+                                                    <motion.div
+                                                        initial={{ opacity: 0, y: 20 }}
+                                                        whileInView={{ opacity: 1, y: 0 }}
+                                                        transition={{ delay: index * 0.2 + 0.5 }}
+                                                        viewport={{ once: true }}
+                                                    >
+                                                        <Button
+                                                            asChild
+                                                            variant="outline"
+                                                            size="sm"
+                                                            className="border-black text-black hover:bg-black hover:text-white transition-colors"
+                                                        >
+                                                            <motion.a
+                                                                href={job.website}
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                whileHover={{ scale: 1.05 }}
+                                                                whileTap={{ scale: 0.95 }}
+                                                                className="flex items-center space-x-2"
+                                                            >
+                                                                <ExternalLink className="w-4 h-4" />
+                                                                <span>Visitar {job.company}</span>
+                                                            </motion.a>
+                                                        </Button>
+                                                    </motion.div>
+                                                )}
+                                            </div>
+                                        </div>
+
+                                        <div className="lg:col-span-2 space-y-6">
+                                            <p className="text-gray-600 leading-relaxed">{job.description}</p>
+
+                                            <div>
+                                                <h4 className="font-semibold text-black mb-3">Logros Principales:</h4>
+                                                <ul className="space-y-2">
+                                                    {job.achievements.map((achievement, achievementIndex) => (
+                                                        <motion.li
+                                                            key={achievementIndex}
+                                                            initial={{ opacity: 0, x: -20 }}
+                                                            whileInView={{ opacity: 1, x: 0 }}
+                                                            transition={{ delay: index * 0.2 + achievementIndex * 0.1 }}
+                                                            viewport={{ once: true }}
+                                                            className="flex items-start space-x-3"
+                                                        >
+                                                            <div className="w-2 h-2 bg-black rounded-full mt-2 flex-shrink-0" />
+                                                            <span className="text-gray-700">{achievement}</span>
+                                                        </motion.li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+
                 {/* Work Section */}
                 <section id="projects" className="py-20">
                     <div className="container mx-auto px-8 lg:px-16">
@@ -378,7 +550,7 @@ export default function Portfolio() {
                             className="mb-16"
                         >
                             <p className="text-sm font-mono text-gray-600 tracking-wider uppercase mb-4">
-                                03 — Proyectos Seleccionados
+                                04 — Proyectos Seleccionados
                             </p>
                             <h2 className="text-4xl lg:text-5xl font-bold">
                                 Trabajo
@@ -388,35 +560,7 @@ export default function Portfolio() {
                         </motion.div>
 
                         <div className="space-y-32">
-                            {[
-                                {
-                                    title: "E-Commerce Platform",
-                                    category: "Full Stack Development",
-                                    description:
-                                        "Plataforma completa de comercio electrónico con panel de administración, sistema de pagos y gestión de inventario.",
-                                    image: "/placeholder.svg?height=600&width=800",
-                                    tech: ["Next.js", "TypeScript", "Stripe", "Prisma"],
-                                    year: "2024",
-                                },
-                                {
-                                    title: "Creative Agency Website",
-                                    category: "Frontend Development",
-                                    description:
-                                        "Sitio web para agencia creativa con animaciones avanzadas y experiencia de usuario inmersiva.",
-                                    image: "/placeholder.svg?height=600&width=800",
-                                    tech: ["React", "Framer Motion", "GSAP", "Tailwind"],
-                                    year: "2023",
-                                },
-                                {
-                                    title: "SaaS Dashboard",
-                                    category: "UI/UX Design & Development",
-                                    description:
-                                        "Dashboard completo para aplicación SaaS con visualización de datos en tiempo real y múltiples integraciones.",
-                                    image: "/placeholder.svg?height=600&width=800",
-                                    tech: ["Vue.js", "D3.js", "Node.js", "MongoDB"],
-                                    year: "2023",
-                                },
-                            ].map((project, index) => (
+                            {projects.map((project, index) => (
                                 <motion.div
                                     key={project.title}
                                     initial={{ opacity: 0, y: 100 }}
@@ -450,14 +594,31 @@ export default function Portfolio() {
                                         </div>
 
                                         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
-                                            <Button variant="outline" className="border-black text-black hover:bg-black hover:text-white">
-                                                <ExternalLink className="w-4 h-4 mr-2" />
-                                                Ver Proyecto
-                                            </Button>
-                                            <Button variant="ghost" className="text-black hover:bg-gray-100">
-                                                <Github className="w-4 h-4 mr-2" />
-                                                Código
-                                            </Button>
+                                            {project.demoUrl && (
+                                                <Button
+                                                    asChild
+                                                    variant="outline"
+                                                    className="border-black text-black hover:bg-black hover:text-white"
+                                                >
+                                                    <a href={project.demoUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+                                                        <ExternalLink className="w-4 h-4" />
+                                                        <span>Ver Proyecto</span>
+                                                    </a>
+                                                </Button>
+                                            )}
+
+                                            {project.codeUrl && (
+                                                <Button
+                                                    asChild
+                                                    variant="ghost"
+                                                    className="text-black hover:bg-gray-100"
+                                                >
+                                                    <a href={project.codeUrl} target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2">
+                                                        <Github className="w-4 h-4" />
+                                                        <span>Código</span>
+                                                    </a>
+                                                </Button>
+                                            )}
                                         </div>
                                     </motion.div>
 
@@ -491,7 +652,7 @@ export default function Portfolio() {
                             viewport={{ once: true }}
                             className="text-center mb-16"
                         >
-                            <p className="text-sm font-mono text-gray-600 tracking-wider uppercase mb-4">04 — Skills</p>
+                            <p className="text-sm font-mono text-gray-600 tracking-wider uppercase mb-4">05 — Skills</p>
                             <h2 className="text-4xl lg:text-5xl font-bold">Habilidades Técnicas</h2>
                         </motion.div>
 
@@ -554,14 +715,15 @@ export default function Portfolio() {
                             viewport={{ once: true }}
                             className="text-center mb-16"
                         >
-                            <p className="text-sm font-mono text-gray-400 tracking-wider uppercase mb-4">05 — Contacto</p>
+                            <p className="text-sm font-mono text-gray-400 tracking-wider uppercase mb-4">06 — Contacto</p>
                             <h2 className="text-4xl lg:text-6xl font-bold mb-8">
                                 ¿Tienes un proyecto
                                 <br />
                                 <span className="text-gray-400">en mente?</span>
                             </h2>
                             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                                Estoy siempre interesado en nuevos desafíos y oportunidades donde pueda aportar, aprender y crecer como desarrollador.
+                                Estoy siempre interesado en nuevos desafíos y oportunidades donde pueda aportar, aprender y crecer como
+                                desarrollador.
                             </p>
                         </motion.div>
 
@@ -583,36 +745,23 @@ export default function Portfolio() {
                             </motion.a>
 
                             <div className="flex space-x-6">
-                                <motion.a
-                                    href="#"
-                                    whileHover={{ scale: 1.1, rotate: 5 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    className="w-16 h-16 border-2 border-white rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-colors"
-                                >
-                                    <Github className="w-6 h-6" />
-                                </motion.a>
-                                <motion.a
-                                    href="#"
-                                    whileHover={{ scale: 1.1, rotate: -5 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    className="w-16 h-16 border-2 border-white rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-colors"
-                                >
-                                    <Linkedin className="w-6 h-6" />
-                                </motion.a>
+                                {links.map((link) => (
+                                    <motion.a
+                                        key={link.id}
+                                        href={link.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        whileHover={{ scale: 1.1 }}
+                                        whileTap={{ scale: 0.9 }}
+                                        className="w-16 h-16 border-2 border-white rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-colors"
+                                    >
+                                        {link.icon}
+                                    </motion.a>
+                                ))}
                             </div>
                         </motion.div>
                     </div>
                 </section>
-
-                {/* Footer */}
-                <footer className="bg-white py-8 border-t border-gray-200">
-                    <div className="container mx-auto px-8 lg:px-16">
-                        <div className="flex flex-col md:flex-row justify-between items-center">
-                            <p className="text-gray-600">&copy; 2025 Hugo Cayón Laso. Todos los derechos reservados.</p>
-                            <p className="text-sm text-gray-400 font-mono">Diseñado y desarrollado con ❤️</p>
-                        </div>
-                    </div>
-                </footer>
             </div>
         </div>
     )
