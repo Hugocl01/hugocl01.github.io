@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Github, Linkedin, Mail, ExternalLink, ArrowUpRight, Menu, X } from "lucide-react"
+import Hugo from "./assets/Hugo.png"
 import Foko from "./assets/Foko.png"
 import ProyectoPokemon from "./assets/Proyecto-Pokemon.png"
 
@@ -306,7 +307,7 @@ export default function Portfolio() {
                                         className="absolute inset-4 border border-gray-200 rounded-full"
                                     />
                                     <div className="absolute inset-8 rounded-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-                                        <img src="/placeholder.svg" alt="Profile" className="w-full h-full object-cover" />
+                                        <img src={Hugo} alt="Profile" className="w-full h-full object-cover" />
                                     </div>
                                 </div>
                             </motion.div>
@@ -735,7 +736,7 @@ export default function Portfolio() {
                             className="flex flex-col md:flex-row gap-8 justify-center items-center"
                         >
                             <motion.a
-                                href="mailto:tu@email.com"
+                                href="mailto:hugocayon@gmail.com"
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 className="bg-white text-black px-12 py-6 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors flex items-center space-x-3"
