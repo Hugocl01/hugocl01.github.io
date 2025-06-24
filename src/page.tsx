@@ -176,8 +176,15 @@ export default function Portfolio() {
 
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId)
+        const headerOffset = 100
         if (element) {
-            element.scrollIntoView({ behavior: "smooth" })
+            const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+            const offsetPosition = elementPosition - headerOffset
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+            })
         }
         setIsMenuOpen(false)
     }
@@ -283,7 +290,7 @@ export default function Portfolio() {
                                 initial={{ opacity: 0, x: -100 }}
                                 animate={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1, delay: 0.2 }}
-                                className="space-y-8"
+                                className="space-y-8 relative order-2 lg:order-1"
                             >
                                 <div className="space-y-4">
                                     <motion.p
@@ -346,7 +353,7 @@ export default function Portfolio() {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 1, delay: 0.4 }}
-                                className="relative"
+                                className="relative space-y-8 order-1 lg:order-2"
                             >
                                 <div className="relative w-80 h-80 mx-auto">
                                     <motion.div
