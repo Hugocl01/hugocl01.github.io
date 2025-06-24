@@ -37,7 +37,6 @@ const projects = [
         image: Foko,
         tech: ["React", "TypeScript", "JavaScript", "Inertia.js", "Laravel", "PHP", "MySQL", "Tailwind"],
         year: "2025",
-        demoUrl: "https://foko.laravel.cloud",
         codeUrl: "https://github.com/Hugocl01/Foko"
     },
     {
