@@ -52,6 +52,41 @@ const projects = [
     },
 ]
 
+const skills = [
+    {
+        name: "React",
+        level: 80
+    },
+    {
+        name: "JavaScript",
+        level: 90
+    },
+    {
+        name: "TypeScript",
+        level: 75
+    },
+    {
+        name: "Laravel",
+        level: 80
+    },
+    {
+        name: "PHP",
+        level: 90
+    },
+    {
+        name: "MySQL",
+        level: 80
+    },
+    {
+        name: "Tailwind CSS",
+        level: 75
+    },
+    {
+        name: "BootStrap",
+        level: 75
+    },
+]
+
 const jobs = [
     {
         company: "Netkia",
@@ -80,6 +115,25 @@ const jobs = [
             "Trabajo en equipo usando metodologías ágiles",
         ],
         technologies: ["HTML", "CSS", "React", "JavaScript", "Laravel", "PHP", "Bootstrap", "Java", "Git"],
+    },
+]
+
+const categories = [
+    {
+        category: "Frontend",
+        skills: ["React", "JavaScript", "TypeScript"],
+    },
+    {
+        category: "Styling",
+        skills: ["Tailwind", "Bootstrap", "CSS"],
+    },
+    {
+        category: "Backend",
+        skills: ["Laravel", "PHP", "MySQL", "REST APIs"],
+    },
+    {
+        category: "Tools",
+        skills: ["Git", "Vite", "VSCode", "Postman"],
     },
 ]
 
@@ -373,12 +427,12 @@ export default function Portfolio() {
                                     className="grid grid-cols-2 gap-8"
                                 >
                                     <div>
-                                        <h3 className="text-3xl font-bold text-white mb-2">10+</h3>
+                                        <h3 className="text-3xl font-bold text-white mb-2">5+</h3>
                                         <p className="text-gray-400">Proyectos Completados</p>
                                     </div>
                                     <div>
-                                        <h3 className="text-3xl font-bold text-white mb-2">1+</h3>
-                                        <p className="text-gray-400">Años de Experiencia</p>
+                                        <h3 className="text-3xl font-bold text-white mb-2">3+</h3>
+                                        <p className="text-gray-400">Meses de Experiencia</p>
                                     </div>
                                 </motion.div>
                             </div>
@@ -393,16 +447,7 @@ export default function Portfolio() {
                                 <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8">
                                     <h3 className="text-xl font-semibold mb-6">Tecnologías Principales</h3>
                                     <div className="space-y-4">
-                                        {[
-                                            { name: "React", level: 80 },
-                                            { name: "JavaScript", level: 90 },
-                                            { name: "TypeScript", level: 75 },
-                                            { name: "Laravel", level: 80 },
-                                            { name: "PHP", level: 90 },
-                                            { name: "MySQL", level: 80 },
-                                            { name: "Tailwind CSS", level: 75 },
-                                            { name: "BootStrap", level: 75 },
-                                        ].map((skill, index) => (
+                                        {skills.map((skill, index) => (
                                             <motion.div
                                                 key={skill.name}
                                                 initial={{ opacity: 0, x: -50 }}
@@ -658,24 +703,7 @@ export default function Portfolio() {
                         </motion.div>
 
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                            {[
-                                {
-                                    category: "Frontend",
-                                    skills: ["React", "JavaScript", "TypeScript"],
-                                },
-                                {
-                                    category: "Styling",
-                                    skills: ["Tailwind", "Bootstrap", "CSS"],
-                                },
-                                {
-                                    category: "Backend",
-                                    skills: ["Laravel", "PHP", "MySQL", "REST APIs"],
-                                },
-                                {
-                                    category: "Tools",
-                                    skills: ["Git", "Vite", "VSCode", "Postman"],
-                                },
-                            ].map((category, index) => (
+                            {categories.map((category, index) => (
                                 <motion.div
                                     key={category.category}
                                     initial={{ opacity: 0, y: 50 }}
