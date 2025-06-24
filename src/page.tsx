@@ -176,7 +176,7 @@ export default function Portfolio() {
 
     const scrollToSection = (sectionId: string) => {
         const element = document.getElementById(sectionId)
-        const headerOffset = 100
+        const headerOffset = 128
         if (element) {
             const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
             const offsetPosition = elementPosition - headerOffset
