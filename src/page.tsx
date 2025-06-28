@@ -70,7 +70,7 @@ const jobs = [
         website: "https://netkia.es",
         description: "Desarrollo de sitios web y aplicaciones personalizadas para diversos clientes.",
         achievements: [
-            "Desarrollo de más de 4 proyectos web exitosos",
+            "Participación en el desarrollo de más de 4 proyectos web exitosos",
             "Implementación de gestión de usuario en aplicación encargada de administrar el acceso a través de IPs",
         ],
         technologies: ["CakePHP", "PHP", "MySQL", "React", "TypeScript", "JavaScript", "Tailwind CSS", "CSS", "Git"],
