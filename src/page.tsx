@@ -88,7 +88,7 @@ const jobs = [
             "Implementación de bases de datos relacionales",
             "Trabajo en equipo usando metodologías ágiles",
         ],
-        technologies: ["HTML", "CSS", "React", "JavaScript", "Laravel", "PHP", "Bootstrap", "Java", "Git"],
+        technologies: ["React", "JavaScript", "Laravel", "PHP", "HTML", "CSS", "Bootstrap", "Java", "Git"],
     },
 ]
 
