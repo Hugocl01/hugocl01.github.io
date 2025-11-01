@@ -410,7 +410,7 @@ export default function Portfolio() {
                                         <p className="text-gray-400 text-sm lg:text-base">Proyectos Completados</p>
                                     </div>
                                     <div>
-                                        <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">3+</h3>
+                                        <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">4+</h3>
                                         <p className="text-gray-400 text-sm lg:text-base">Meses de Experiencia</p>
                                     </div>
                                 </motion.div>
@@ -571,7 +571,7 @@ export default function Portfolio() {
                             className="mb-12 lg:mb-16"
                         >
                             <p className="text-sm font-mono text-gray-600 tracking-wider uppercase mb-4">
-                                04 — Proyectos Seleccionados
+                                04 — Proyectos Relevantes
                             </p>
                             <h2 className="text-3xl lg:text-4xl xl:text-5xl font-bold">
                                 Trabajo
