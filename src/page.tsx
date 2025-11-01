@@ -56,6 +56,7 @@ const skills = [
     { name: "JavaScript", level: 90 },
     { name: "TypeScript", level: 75 },
     { name: "Laravel", level: 80 },
+    { name: "CakePHP", level: 75 },
     { name: "PHP", level: 90 },
     { name: "MySQL", level: 80 },
     { name: "Tailwind CSS", level: 75 },
@@ -103,7 +104,7 @@ const categories = [
     },
     {
         category: "Backend",
-        skills: ["Laravel", "PHP", "MySQL", "REST APIs"],
+        skills: ["Laravel", "CakePHP", "PHP", "MySQL", "REST APIs"],
     },
     {
         category: "Tools",
