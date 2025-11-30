@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Github, Linkedin, Mail, ExternalLink, ArrowUpRight, Menu, X } from "lucide-react"
 import Hugo from "./assets/Hugo.png"
+import DevLog from "./assets/DevLog.png"
 import Foko from "./assets/Foko.png"
 import ProyectoPokemon from "./assets/Proyecto-Pokemon.png"
 
@@ -30,6 +31,16 @@ const links = [
 ]
 
 const projects = [
+    {
+        title: "DevLog",
+        category: "Frontend Development",
+        description: "Blog personal sobre desarrollo web, mi progreso como dev y tecnología",
+        image: DevLog,
+        tech: ["Astro", "React", "TypeScript", "JavaScript", "Tailwind", "Shadcn", "Markdown"],
+        year: "2025",
+        demoUrl: "https://hugocl01-devlog.netlify.app",
+        codeUrl: "https://github.com/Hugocl01/devlog",
+    },
     {
         title: "Foko",
         category: "Full Stack Development",
