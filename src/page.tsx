@@ -418,11 +418,11 @@ export default function Portfolio() {
                                     className="grid grid-cols-2 gap-6 lg:gap-8"
                                 >
                                     <div>
-                                        <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">5+</h3>
+                                        <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">3+</h3>
                                         <p className="text-gray-400 text-sm lg:text-base">Proyectos Completados</p>
                                     </div>
                                     <div>
-                                        <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">4+</h3>
+                                        <h3 className="text-2xl lg:text-3xl font-bold text-white mb-2">6+</h3>
                                         <p className="text-gray-400 text-sm lg:text-base">Meses de Experiencia</p>
                                     </div>
                                 </motion.div>
